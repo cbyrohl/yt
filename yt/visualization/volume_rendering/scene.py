@@ -130,7 +130,7 @@ class Scene(object):
                     tf = source.transfer_function
                     if not getattr(tf, 'grey_opacity', False):
                         raise RuntimeError("Cannot set the background color for a render "
-                                           "source with grey_opacity=True")
+                                           "source with grey_opacity=False")
             self._background_color = value
         return locals()
     background_color = property(**background_color())
